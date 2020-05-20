@@ -21,7 +21,7 @@ pipeline {
 
     stage('error') {
       steps {
-        junit '\'**/target/surefire-reports/TEST-*.xml'
+        junit '**/target/surefire-reports/TEST-*.xml'
       }
     }
 
