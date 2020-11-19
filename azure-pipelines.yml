@@ -26,11 +26,13 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
+    sqMavenPluginVersionChoice: 'latest'
     checkStyleRunAnalysis: true
     pmdRunAnalysis: true
     findBugsRunAnalysis: true
-- task: SonarQubeAnalyze@4
+
 - task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
